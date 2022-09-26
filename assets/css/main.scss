@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "chomsky";
+  src: url("../fonts/chomsky/Chomsky.otf") format("woff");
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+header {
+  .language-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0.5rem 0;
+
+    li {
+      a {
+        color: #000;
+        margin: 0 10px;
+        text-transform: uppercase;
+        font-size: 0.7rem;
+        text-decoration: none;
+      }
+
+      .active {
+        font-weight: 600;
+      }
+    }
+  }
+  h1 {
+    font-family: "chomsky";
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
+
+  .navbar {
+    overflow: hidden;
+    border-top: 1px solid #b9b9b9;
+    border-bottom: double 3px #000;
+    display: flex;
+    justify-content: center;
+
+    a {
+      color: #000;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+  }
+}
+
+.navbar a:hover {
+  background-color: rgb(247, 247, 247);
+  color: black;
+}
+
+.navbar a.active {
+  font-weight: 600;
+}
+
+.navbar .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar .nav-link {
+    display: none;
+  }
+  .navbar a.icon {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive {
+    position: relative;
+  }
+
+  .navbar.responsive {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
